@@ -1,0 +1,240 @@
+/* 手账风格全局样式 */
+@import './variables.scss';
+
+/* 重置样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+page {
+  font-family: $font-family;
+  color: $text-primary;
+  background-color: $bg-primary;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 纸质纹理背景 */
+.paper-texture {
+  background-color: $bg-primary;
+  background-image: 
+    linear-gradient(90deg, transparent 98%, rgba($border-color, 0.3) 98%),
+    linear-gradient(0deg, transparent 98%, rgba($border-color, 0.3) 98%);
+  background-size: 20px 20px;
+}
+
+/* 手账卡片 */
+.diary-card {
+  background: $bg-secondary;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin: $spacing-md 0;
+  box-shadow: $shadow-soft;
+  border: 2px solid transparent;
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  /* 胶带装饰效果 */
+  &.tape-decoration::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    width: 80px;
+    height: 24px;
+    background: rgba($accent-warm, 0.6);
+    border-radius: 4px;
+    z-index: 1;
+  }
+}
+
+/* 手绘边框 */
+.hand-drawn-border {
+  border: 2px solid $border-color;
+  border-radius: $radius-md;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid $border-color;
+    border-radius: $radius-md;
+    transform: rotate(0.5deg);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+/* 按钮样式 */
+.btn-primary {
+  background: linear-gradient(135deg, $accent-warm, $accent-coral);
+  color: white;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $radius-xl;
+  border: none;
+  font-size: $font-size-md;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: $shadow-soft;
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+}
+
+.btn-secondary {
+  background: $bg-secondary;
+  color: $text-primary;
+  padding: $spacing-md $spacing-xl;
+  border-radius: $radius-xl;
+  border: 2px solid $border-color;
+  font-size: $font-size-md;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:active {
+    background: $bg-tertiary;
+  }
+}
+
+/* 输入框样式 */
+.input-diary {
+  background: $bg-secondary;
+  border: 2px solid $border-color;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  font-size: $font-size-md;
+  color: $text-primary;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: $accent-warm;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($accent-warm, 0.1);
+  }
+
+  &::placeholder {
+    color: $text-muted;
+  }
+}
+
+/* 标签样式 */
+.tag {
+  display: inline-block;
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-xl;
+  font-size: $font-size-sm;
+  font-weight: 500;
+  margin: $spacing-xs;
+
+  &.tag-warm {
+    background: rgba($accent-warm, 0.15);
+    color: $accent-warm;
+  }
+
+  &.tag-green {
+    background: rgba($accent-green, 0.15);
+    color: $accent-green;
+  }
+
+  &.tag-coral {
+    background: rgba($accent-coral, 0.15);
+    color: $accent-coral;
+  }
+}
+
+/* 红点提醒 */
+.badge-dot {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 8px;
+    height: 8px;
+    background: $accent-coral;
+    border-radius: 50%;
+    border: 2px solid $bg-primary;
+  }
+}
+
+/* 动画 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flipCard {
+  0% { transform: rotateY(0deg); }
+  50% { transform: rotateY(90deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-flip {
+  animation: flipCard 0.6s ease-in-out;
+}
+
+/* 布局工具类 */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* 字体工具类 */
+.font-serif {
+  font-family: $font-serif;
+}
+
+.font-mono {
+  font-family: $font-mono;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-color;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $text-muted;
+}
