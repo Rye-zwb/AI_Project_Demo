@@ -1,0 +1,146 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "平行旅人",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "我的名片",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/edit-profile/edit-profile",
+      "style": {
+        "navigationBarTitleText": "编辑资料",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/bond-confirm/bond-confirm",
+      "style": {
+        "navigationBarTitleText": "建立羁绊",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/bond/bond",
+      "style": {
+        "navigationBarTitleText": "我的羁绊",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/bond-archive/bond-archive",
+      "style": {
+        "navigationBarTitleText": "羁绊档案",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "posts/posts",
+      "style": {
+        "navigationBarTitleText": "羁绊空间",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/post-create/post-create",
+      "style": {
+        "navigationBarTitleText": "发布动态",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/coincidence/coincidence",
+      "style": {
+        "navigationBarTitleText": "默契发现",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/tasks/tasks",
+      "style": {
+        "navigationBarTitleText": "同步任务",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/task-preferences/task-preferences",
+      "style": {
+        "navigationBarTitleText": "任务偏好",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/vlog/vlog",
+      "style": {
+        "navigationBarTitleText": "平行世界Vlog",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/achievements/achievements",
+      "style": {
+        "navigationBarTitleText": "成就徽章",
+        "navigationBarBackgroundColor": "#FAF8F5",
+        "navigationBarTextStyle": "black"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "平行旅人",
+    "navigationBarBackgroundColor": "#FAF8F5",
+    "backgroundColor": "#FAF8F5"
+  },
+  "tabBar": {
+    "color": "#8A8279",
+    "selectedColor": "#C45C3E",
+    "backgroundColor": "#FAF8F5",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "posts/posts",
+        "text": "羁绊空间",
+        "iconPath": "static/tabbar/space.png",
+        "selectedIconPath": "static/tabbar/space-active.png"
+      },
+      {
+        "pagePath": "pages/tasks/tasks",
+        "text": "任务",
+        "iconPath": "static/tabbar/task.png",
+        "selectedIconPath": "static/tabbar/task-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/tabbar/profile.png",
+        "selectedIconPath": "static/tabbar/profile-active.png"
+      }
+    ]
+  }
+}
